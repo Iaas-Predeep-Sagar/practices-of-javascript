@@ -1,0 +1,61 @@
+var obj={}
+undefined
+typeof obj
+'object'
+obj instanceof Object
+true
+obj.id=12;
+12
+obj
+{id: 12}
+obj.name="pradeep sagar ";
+'pradeep sagar '
+obj.salary=60000;
+60000
+obj
+{id: 12, name: 'pradeep sagar ', salary: 60000}id: 12name: "pradeep sagar "salary: 60000[[Prototype]]: Object
+function createEmployee( id,name,salary){
+   let emp={}
+    emp.id=id;
+    emp.name=name;
+    emp.salary=salary;
+    return emp;
+    
+} 
+undefined
+let emp1=createEmployee(1201," pradeep sagar",80000)
+undefined
+emp1
+{id: 1201, name: ' pradeep sagar', salary: 80000}
+typeof emp1
+'object'
+epm1 instanceof Object
+VM867:1 Uncaught ReferenceError: epm1 is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM867:1
+emp1 instanceof createEmployee
+false
+emp1 instanceof Object
+true
+console.log("here emp1 is the gerneral object not a specific type of object ");
+VM1158:1 here emp1 is the gerneral object not a specific type of object 
+undefined
+function createEmployee( id,name,salary){
+    this.id=id;
+    this.name=name;
+    this.salary=salary;
+    // return emp;
+    
+} 
+undefined
+let obj2= new createEmployee(1020,"pradeep sagar",90000);
+undefined
+obj2
+createEmployee {id: 1020, name: 'pradeep sagar', salary: 90000}id: 1020name: "pradeep sagar"salary: 90000[[Prototype]]: Object
+obj2 instanceof Object
+true
+obj2 instanceof createEmployee
+true
+console.log("now with the help of new and this keyword we create the specific type of object ");
+VM1780:1 now with the help of new and this keyword we create the specific type of object 
+undefined
